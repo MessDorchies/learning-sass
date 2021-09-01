@@ -7,55 +7,55 @@ html body {
 
 @-webkit-keyframes reduceZoomTransparency {
   0% {
-    height: 70%;
+    height: 60%;
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
   }
   100% {
-    height: 30%;
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    height: 20%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     opacity: 0.7;
   }
 }
 
 @keyframes reduceZoomTransparency {
   0% {
-    height: 70%;
+    height: 60%;
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
   }
   100% {
-    height: 30%;
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    height: 20%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     opacity: 0.7;
   }
 }
 
 @-webkit-keyframes growBox {
   0% {
-    height: 30%;
+    height: 25%;
   }
   100% {
-    height: 70%;
+    height: 65%;
   }
 }
 
 @keyframes growBox {
   0% {
-    height: 30%;
+    height: 25%;
   }
   100% {
-    height: 70%;
+    height: 65%;
   }
 }
 
 html body #MyBox {
   position: relative;
-  margin: 0% 33% 0% 33%;
+  margin: 5% 35% 0% 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +65,7 @@ html body #MyBox {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
+  width: 30%;
   height: 500px;
   background-color: gray;
 }
@@ -75,22 +75,27 @@ html body #MyBox #ImageContainer {
           box-sizing: content-box;
   background-image: url(image/BgMexico.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   width: 100%;
-  height: 70%;
+  height: 60%;
 }
 
 html body #MyBox #MyArticle {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   width: 100%;
-  height: 30%;
+  height: 25%;
   bottom: 0;
   background-color: gray;
 }
 
 html body #MyBox #MyArticle p {
   visibility: hidden;
+}
+
+html body #MyBox #Footer {
+  bottom: 0;
+  padding: 10px;
 }
 
 html body #MyBox:hover {
