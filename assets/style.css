@@ -142,6 +142,7 @@ html body #MyBox:hover #MyArticle p {
 
 html body h1 {
   font-size: 20px;
+  color: lightgray;
 }
 
 html body h2 {
