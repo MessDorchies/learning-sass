@@ -4,6 +4,16 @@ html{
         margin: 0%;
         text-align: center;
         background-color: ivory;
+        @keyframes growAndTransparency{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(2);
+                opacity: 0.7;
+            }
+        }
     
         #MyBox{
             box-sizing: border-box;
@@ -29,12 +39,13 @@ html{
             }
         }
         #MyBox:hover{
-            box-shadow: 3px 3px 5px black;
+            box-shadow: 0 0 30px black;
             overflow: hidden;
             #ImageContainer{
                 height: 40%;
-                transform: scale(2);
-                opacity: 0.7;
+                animation: growAndTransparency;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
             }
             #MyArticle{
                 z-index: 2;
