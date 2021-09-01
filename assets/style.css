@@ -1,0 +1,79 @@
+html body {
+  width: 100%;
+  margin: 0%;
+  text-align: center;
+  background-color: ivory;
+}
+
+html body #MyBox {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0% 33% 0% 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: 500px;
+  background-color: gray;
+}
+
+html body #MyBox #ImageContainer {
+  background-image: url(image/BgMexico.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60%;
+}
+
+html body #MyBox #MyArticle {
+  height: auto;
+  background-color: gray;
+}
+
+html body #MyBox #MyArticle p {
+  visibility: hidden;
+}
+
+html body #MyBox:hover {
+  -webkit-box-shadow: 3px 3px 5px black;
+          box-shadow: 3px 3px 5px black;
+  overflow: hidden;
+}
+
+html body #MyBox:hover #ImageContainer {
+  height: 40%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 0.7;
+}
+
+html body #MyBox:hover #MyArticle {
+  z-index: 2;
+}
+
+html body #MyBox:hover #MyArticle h1 {
+  font-size: 36px;
+}
+
+html body #MyBox:hover #MyArticle h2 {
+  font-size: 25px;
+}
+
+html body #MyBox:hover #MyArticle p {
+  visibility: visible;
+}
+
+html body h1 {
+  font-size: 20px;
+}
+
+html body h2 {
+  font-size: 16px;
+  color: whitesmoke;
+}
+/*# sourceMappingURL=style.css.map */
