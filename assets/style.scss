@@ -6,7 +6,7 @@ html{
         background-color: ivory;
         @keyframes reduceZoomTransparency {
             0%{
-                height: 60%;
+                height: 50%;
                 transform: scale(1);
                 opacity: 1;
             }
@@ -24,6 +24,14 @@ html{
                 height: 45%;
             }
         }
+        @keyframes changePlace {
+            0%{
+                margin-top: 60%;
+            }
+            100%{
+                margin-top: 48%;
+            }
+        }
         #MyBox{
             position: relative;
             margin: 5% 35% 0% 35%;
@@ -31,7 +39,7 @@ html{
             flex-wrap: wrap;
             flex-direction: column;
             width: 30%;
-            height: 500px;
+            height: 600px;
             background-color: gray;
             #ImageContainer{
                 box-sizing: content-box;
@@ -40,6 +48,14 @@ html{
                 background-size: 100%;
                 width: 100%;
                 height: 60%;
+            }
+            #BoxFloat{
+                margin-top: 60%;
+                background-color: brown;
+                font-size: 25px;
+                width: 30%;
+                position: absolute;
+                z-index: 3;
             }
             #MyArticle{
                 box-sizing: content-box;
@@ -62,6 +78,12 @@ html{
             overflow: hidden;
             #ImageContainer{
                 animation: reduceZoomTransparency;
+                animation-duration: 0.5s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
+            }
+            #BoxFloat{
+                animation: changePlace;
                 animation-duration: 0.5s;
                 animation-delay: 0s;
                 animation-fill-mode: forwards;

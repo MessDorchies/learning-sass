@@ -7,7 +7,7 @@ html body {
 
 @-webkit-keyframes reduceZoomTransparency {
   0% {
-    height: 60%;
+    height: 50%;
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
@@ -22,7 +22,7 @@ html body {
 
 @keyframes reduceZoomTransparency {
   0% {
-    height: 60%;
+    height: 50%;
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
@@ -53,6 +53,24 @@ html body {
   }
 }
 
+@-webkit-keyframes changePlace {
+  0% {
+    margin-top: 60%;
+  }
+  100% {
+    margin-top: 48%;
+  }
+}
+
+@keyframes changePlace {
+  0% {
+    margin-top: 60%;
+  }
+  100% {
+    margin-top: 48%;
+  }
+}
+
 html body #MyBox {
   position: relative;
   margin: 5% 35% 0% 35%;
@@ -66,7 +84,7 @@ html body #MyBox {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 30%;
-  height: 500px;
+  height: 600px;
   background-color: gray;
 }
 
@@ -78,6 +96,15 @@ html body #MyBox #ImageContainer {
   background-size: 100%;
   width: 100%;
   height: 60%;
+}
+
+html body #MyBox #BoxFloat {
+  margin-top: 60%;
+  background-color: brown;
+  font-size: 25px;
+  width: 30%;
+  position: absolute;
+  z-index: 3;
 }
 
 html body #MyBox #MyArticle {
@@ -108,6 +135,17 @@ html body #MyBox:hover {
 html body #MyBox:hover #ImageContainer {
   -webkit-animation: reduceZoomTransparency;
           animation: reduceZoomTransparency;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html body #MyBox:hover #BoxFloat {
+  -webkit-animation: changePlace;
+          animation: changePlace;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-delay: 0s;
